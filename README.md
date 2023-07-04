@@ -58,12 +58,15 @@ The repo was documented in a professional way. The Website is simple and dynamic
 **Technical features:**
 - **no linter errors**
 - **dynamically created #book-list section**
+- **dynamically created sections (single-page app)**
 - **'Add' button that adds a new book to the list**
 - **'Remove' button that removes the book from the list**
 - **data is preserved in the browser's memory**
+- **objects and arrays are created by class constructors**
 
 **Design features:**
 - **using medium-fidelity wireframe**
+- **responsive layout**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -88,7 +91,7 @@ Login to your GitHub account. Clone this repository to your desired folder:
 
 ### Prerequisites
 
-In order to run this project you need:
+In order to run and modify this project you need:
 
 - gitHub account;
 - git installed on your OS;
@@ -97,7 +100,7 @@ In order to run this project you need:
 
 ### Install
 
-Installations required to run this project. You might want to have linters installed in your local env to successfully run and modify this project:
+Installations required to run and modify this project. You might want to have linters installed in your local env to successfully run and modify this project:
 
 - Webhint installation. Run the following command:
 > npm install --save-dev hint@7.x
@@ -113,13 +116,13 @@ Installations required to run this project. You might want to have linters insta
 You can use this project to store your own collection of books:
 
 1. Open index.html file in your browser (or open the [Demo](https://zilola-nazarova.github.io/awesome_books/) link).
-2. Click the "Add" button to add a new book to the collection. The new book is displayed in the page.
-3. Click the "Remove" button to removed the book from the collection. The corresponding book dissapears from the page.
+2. Navigate to the Add-new page in navigation bar. Click the "Add" button to add a new book to the collection. The new book is displayed in the List page. 
+3. Navigate to the List page in navigation bar. Click the "Remove" button to removed the book from the collection. The corresponding book dissapears from the List page.
 4. Refresh your page. Your data is preserved in the browser's memory.
 
 ### Run tests
 
-To run tests, run the following commands:
+To run tests on the cloned project, run the following commands:
 
 > npx hint .<br />
 > npx stylelint "**/*.{css,scss}" <br />
@@ -152,9 +155,9 @@ Visit this project's single-page app [here](https://zilola-nazarova.github.io/aw
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-Future features will be implemented in new branches and will:
-- refactor the code to use JavaScript classes. See the requirements [here](https://github.com/microverseinc/curriculum-javascript/blob/main/books/m2_plain_js_classes_v1_1.md);
-- add the navigation to convert it into a fully functional website. See the requirements [here](https://github.com/microverseinc/curriculum-javascript/blob/main/books/m4_full_website_v1_1.md);
+Future features may include:
+- design improvements;
+- additional functionalities.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
