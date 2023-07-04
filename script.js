@@ -51,13 +51,6 @@ class Books {
   }
 }
 
-function addBook(title, author) {
-  const book = new Books(title, author);
-  collection.AddCard(book);
-  book.ShowCards();
-  const dataMarker = JSON.stringify(collection.array);
-  localStorage.setItem('data', dataMarker);
-}
 window.addEventListener('DOMContentLoaded', () => {
   if (localStorage.getItem('data')) {
     const retrievedData = JSON.parse(localStorage.getItem('data'));
@@ -73,6 +66,10 @@ submit.addEventListener('click', () => {
   if (titleInput.value === '' && authorInput.value === '') {
     return null;
   }
-  addBook(titleInput.value, authorInput.value);
+  const book = new Books(titleInput.value, authorInput.value);
+  collection.AddCard(book);
+  book.ShowCards();
+  const dataMarker = JSON.stringify(collection.array);
+  localStorage.setItem('data', dataMarker);
   return form.reset();
 });
