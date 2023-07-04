@@ -18,14 +18,11 @@ class Books {
     collection.array.forEach((card) => {
       const div = document.createElement('div');
       div.classList.add('card');
-      const heading = document.createElement('h1');
       const paragraph = document.createElement('p');
       const deleteBook = document.createElement('button');
       deleteBook.classList.add('delete-book');
-      heading.textContent = `${card.title}`;
-      paragraph.textContent = `${card.author}`;
+      paragraph.textContent = `"${card.title}" by ${card.author}`;
       deleteBook.textContent = 'Remove';
-      div.appendChild(heading);
       div.appendChild(paragraph);
       div.appendChild(deleteBook);
       container.appendChild(div);
