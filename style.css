@@ -5,15 +5,6 @@
   font-family: 'Fuzzy Bubbles', cursive;
 }
 
-main {
-  /* display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 1rem;
-  gap: 2rem; */
-}
-
 #book-list {
   margin-top: 30px;
 }
@@ -88,10 +79,10 @@ div input {
 }
 
 div input::placeholder {
- color: black;
- font-size: 14px;
- line-height: 1em;
- font-weight: 700;
+  color: black;
+  font-size: 14px;
+  line-height: 1em;
+  font-weight: 700;
 }
 
 h2 {
@@ -110,4 +101,3 @@ h2 {
   font-weight: 700;
   box-shadow: 3px 3px;
 }
-

@@ -1,8 +1,23 @@
+/* eslint-disable max-classes-per-file */
+/* eslint-disable class-methods-use-this */
+
 const container = document.querySelector('.container');
 const titleInput = document.querySelector('#title');
 const authorInput = document.querySelector('#author');
 const submit = document.querySelector('#add-button');
 const form = document.querySelector('.form');
+
+class Cards {
+  constructor() {
+    this.array = [];
+  }
+
+  AddCard(book) {
+    this.array.push(book);
+  }
+}
+
+const collection = new Cards();
 
 class Books {
   constructor(title, author) {
@@ -26,7 +41,6 @@ class Books {
       div.appendChild(paragraph);
       div.appendChild(deleteBook);
       container.appendChild(div);
-  
       deleteBook.addEventListener('click', (e) => {
         collection.array.splice(collection.array.indexOf(card), 1);
         e.target.parentNode.remove();
@@ -36,17 +50,6 @@ class Books {
     });
   }
 }
-
-class cards {
-  constructor() {
-    this.array = [];
-  }
-  AddCard(book) {
-    this.array.push(book);
-  }
-}
-
-let collection = new cards();
 
 function addBook(title, author) {
   const book = new Books(title, author);
@@ -58,12 +61,11 @@ function addBook(title, author) {
 window.addEventListener('DOMContentLoaded', () => {
   if (localStorage.getItem('data')) {
     const retrievedData = JSON.parse(localStorage.getItem('data'));
-    for(i = 0; i < retrievedData.length; i++) {
-      let book = new Books(retrievedData[i].title, retrievedData[i].author);
+    for (let i = 0; i < retrievedData.length; i += 1) {
+      const book = new Books(retrievedData[i].title, retrievedData[i].author);
       collection.AddCard(book);
       book.ShowCards();
     }
-
   }
 });
 
