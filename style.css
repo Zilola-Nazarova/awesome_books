@@ -1,4 +1,4 @@
-body {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -6,38 +6,58 @@ body {
 }
 
 main {
-  display: flex;
+  /* display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 1rem;
-  gap: 2rem;
+  gap: 2rem; */
 }
 
+.container {
+  border: 2px solid;
+  border-radius: 8px;
+  padding: 8px;
+}
 
 form {
-  border-radius: 4px;
   flex-direction: column;
-  align-self: flex-end;
   gap: 10px;
-  width: 88%;
+  width: 50%;
   display: flex;
   padding: 0.8rem;
-  }
-  #add-button {
-    background-color: rgb(9, 247, 116);
-    width: 30px;
-    width: 30%;
-    align-self: flex-end;
-  }
+  margin: auto;
+}
 
-  h3 {
-   align-self: center;
-   color: rgb(5, 134, 63);
-  }
+div input {
+  width: 100%;
+  border: 2px solid black;
+  border-radius: 3px;
+  height: 30px;
+}
 
-  .container {
-    border: 2px solid;
-     border-radius: 8px;
-     padding: 8px;
-  }
+div input::placeholder {
+ padding-left: 5px;
+ color: black;
+ font-size: 14px;
+ line-height: 1em;
+ font-weight: 700;
+}
+
+h2 {
+  text-align: center;
+  color: rgb(9, 247, 116);
+  font-size: 32px;
+}
+
+#add-button {
+  background-color: rgb(9, 247, 116);
+  width: 30%;
+  align-self: flex-end;
+  height: 30px;
+  font-size: 14px;
+  line-height: 1em;
+  font-weight: 700;
+  box-shadow: 3px 3px;
+}
+
