@@ -1,35 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+  <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Awesome Books (Collins & Zilola)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <main>
-  
-  <section id="book-list">
-    <h1>Awesome Books</h1>
-    <div class="container">
-    </div>
-  </section>
-  <section id="add-book-form" class="content-section">
-    <form class="form">
-      <h3>add a new book</h3>
-      <div>
-        <input type="text" id="title" placeholder="Title" />
-      <span id="titleError"></span>
+    <section id="book-list">
+      <h1>All awesome books</h1>
+      <div class="container">
       </div>
-      <div>
-        <input type="text" id="author" placeholder="Author" />
-      <span id="authorError"></span>
-      </div>
-       <button type="button" id="add-button">Add</button>
-       </form>
     </section>
-</main>
+    <section id="add-book-form" class="content-section">
+      <form class="form">
+        <h2>Add a new book</h2>
+        <div>
+          <input type="text" id="title" placeholder="Title" />
+          <span id="titleError"></span>
+        </div>
+        <div>
+          <input type="text" id="author" placeholder="Author" />
+          <span id="authorError"></span>
+        </div>
+        <button type="button" id="add-button">Add</button>
+      </form>
+    </section>
+  </main>
 <script src="script.js"></script>
 </body>
 </html>
