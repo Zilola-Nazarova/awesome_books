@@ -15,7 +15,7 @@ class Books {
     removeDivs.forEach((div) => {
       div.remove();
     });
-    cards.forEach((card) => {
+    collection.array.forEach((card) => {
       const div = document.createElement('div');
       div.classList.add('card');
       const heading = document.createElement('h1');
@@ -31,32 +31,42 @@ class Books {
       container.appendChild(div);
   
       deleteBook.addEventListener('click', (e) => {
-        cards.splice(cards.indexOf(card), 1);
+        collection.array.splice(collection.array.indexOf(card), 1);
         e.target.parentNode.remove();
-        const dataMarker = JSON.stringify(cards);
+        const dataMarker = JSON.stringify(collection.array);
         localStorage.setItem('data', dataMarker);
       });
     });
   }
 }
 
-let cards = [];
+class cards {
+  constructor() {
+    this.array = [];
+  }
+  AddCard(book) {
+    this.array.push(book);
+  }
+}
 
+let collection = new cards();
 
 function addBook(title, author) {
   const book = new Books(title, author);
-  cards.push(book);
+  collection.AddCard(book);
   book.ShowCards();
-  const dataMarker = JSON.stringify(cards);
+  const dataMarker = JSON.stringify(collection.array);
   localStorage.setItem('data', dataMarker);
 }
 window.addEventListener('DOMContentLoaded', () => {
   if (localStorage.getItem('data')) {
-    cards = JSON.parse(localStorage.getItem('data'));
-  }
-  for(i = 0; i < cards.length; i++) {
-    let book = new Books(cards[i].title, cards[i].author);
-    book.ShowCards();
+    const retrievedData = JSON.parse(localStorage.getItem('data'));
+    for(i = 0; i < retrievedData.length; i++) {
+      let book = new Books(retrievedData[i].title, retrievedData[i].author);
+      collection.AddCard(book);
+      book.ShowCards();
+    }
+
   }
 });
 
