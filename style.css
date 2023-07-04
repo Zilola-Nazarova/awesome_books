@@ -181,6 +181,10 @@ footer {
   font-weight: bolder;
 }
 
+#contact-info ul {
+  margin-bottom: 20px;
+}
+
 @media screen and (max-width: 500px) {
   nav {
     justify-content: center;
