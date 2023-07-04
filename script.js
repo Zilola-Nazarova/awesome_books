@@ -88,7 +88,7 @@ class BookList {
     const bookList = document.getElementById('book-list');
     bookList.innerHTML = '';
 
-    // List books page header 
+    // List books page header
     const h1 = document.createElement('h1');
     h1.textContent = 'All Awesome Books';
     bookList.appendChild(h1);
